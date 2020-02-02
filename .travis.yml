@@ -30,7 +30,7 @@ jobs:
         - wget -P build/libs https://github.com/$GITHUB_USERNAME/pal-tracker/releases/download/$RELEASE_TAG/pal-tracker.jar
       before_deploy:
         - echo "Deploying $RELEASE_TAG to Cloud Foundry"
-        - export CF_TRACE=true
+        #- export CF_TRACE=true
       deploy:
         provider: cloudfoundry
         api: $CF_API_URL
